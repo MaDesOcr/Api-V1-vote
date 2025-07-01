@@ -1,0 +1,12 @@
+{
+  "name": "innotechfusion-api-v1",
+  "version": "1.2.3",
+  "main": "src/app.js",
+  "scripts": {"start": "node src/app.js"},
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.2",
+    "sqlite": "^5.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
