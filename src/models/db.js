@@ -16,6 +16,19 @@ async function initDb() {
   'UNIQUE(first_name, last_name, birth_date)' +
   ');'
 );
+const members = [
+    ['Alice', 'Durand', '1985-02-14'],
+    ['Bob', 'Martin', '1978-06-30'],
+    ['Carole', 'Lefevre', '1990-11-23'],
+    ['David', 'Petit', '1982-03-05'],
+    ['Emma', 'Bernard', '1995-08-19']
+  ];
+  for (const [first, last, birth] of members) {
+    await db.run(
+      'INSERT OR IGNORE INTO members (first_name, last_name, birth_date) VALUES (?, ?, ?)',
+      first, last, birth
+    );
+  }
 }
 
 
